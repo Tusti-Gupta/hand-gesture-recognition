@@ -1,0 +1,27 @@
+body{
+    background-image: url("https://images.pexels.com/photos/1672322/pexels-photo-1672322.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: darksalmon;
+    color: white;
+    text-align: center;
+    font-family: cursive;
+    font-size: 10px;
+    height: 15px;
+  }
+
+#snapshot_button {
+    background-color: white;
+    padding: 10px;
+    border-radius: 90%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: grey;
+}

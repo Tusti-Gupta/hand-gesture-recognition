@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Hand Gesture Recognition </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <center>
+            <br><br>
+            <h1 style="font-family: cursive; color: wheat;"> 🤜 Hand 🤛 Gesture 🙏 Recognition 👍 </h1>\
+            <br><br><br>
+            <div id="camera"></div>
+            <button id="snapshot_button" onclick="take_snapshot()"><i class="fa fa-camera" style="color: grey; font-size: 50px;"></i></button>
+            <br><br><br><br>
+            <div id="picture"></div>
+        </center>
+
+        <div class="footer">
+            <p> Author: Tusti Gupta </p>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
