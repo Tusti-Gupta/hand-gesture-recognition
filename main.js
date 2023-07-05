@@ -11,7 +11,8 @@ Webcam.attach('#camera');
 
 function take_snapshot() {
     Webcam.snap(function (data_uri) {
-        document.getElementById("picture").innerHTML = '<img id="capture_picture" src="'+data_uri+'"/>';
+        document.getElementById("picture").innerHTML = '<img id="captured_picture" style="margin-bottom: 20px;" src="'+data_uri+'"/>';
+        check();
     });
 }
 
@@ -21,4 +22,22 @@ classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models
 
 function modelLoaded() {
     console.log("Model is loaded!");
+}
+
+function check() {
+    img = document.getElementById("captured_picture");
+    classifier.classify(img, gotResult);
+}
+
+function gotResult(error, results) {
+    if (error) {
+        console.error(error);
+    } else {
+        console.log(results);
+        document.getElementById("result_object").innerHTML = results[0].label;
+        accuracy=results[0].confidence.toFixed(3);
+        accuracy=(accuracy*100) + "%";
+        document.getElementById("result_accuracy").innerHTML = accuracy;
+
+    }
 }
